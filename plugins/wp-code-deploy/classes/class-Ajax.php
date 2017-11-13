@@ -104,7 +104,6 @@ class WPCD_Ajax extends WPCD
 		$command = "ssh-add ".self::is_private_key_exists();
 		if( self::is_public_key_exists() && self::is_private_key_exists() ){	
 			print exec( $command, $output, $return ); die;
-			var_dump( $output, $return);
 			if( $return == 0 ){
 				$response['message'] = self::admin_success( __( "Keys has been successful added!" ), false );
 				/*Log*/
